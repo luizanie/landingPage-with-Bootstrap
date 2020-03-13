@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Actor&display=swap");
+
+:root {
+  --dark-color: #121420;
+
+  --first: #0f073b;
+  /* --sec: #822e81;  */
+  --sec: #F18F01;
+
+  /* --third: #53917e; */
+  --third: #822E81;
+  --fourth: #2E86AB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Actor", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 80vh;
+  position: relative;
+}
+
+.section.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+.header {
+  background-color: #0f073b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.5s;
+}
+
+.header.light {
+  background-color: #A23B72;
+}
+
+.header-buttons .btn {
+  color: #fff;
+}
+
+.btn.black {
+  color: var(--first);
+  font-weight: bold;
+  border: 2px solid var(--first);
+}
+
+.header-logo img {
+  height: 30px;
+}
+
+/* section - first */
+section.main {
+  background-color: var(--first);
+}
+
+.main-header {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-header .btn {
+  background-color: #822e81;
+  border-color: #822e81;
+  color: #fff;
+  font-size: 22px;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  transform: translateX(-50%);
+  background-color: var(--third);
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--third);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fa-arrow-down {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: jumping 2s ease infinite;
+}
+
+@keyframes jumping {
+
+  0%,
+  100% {
+    top: 10%
+  }
+
+  50% {
+    top: 70%;
+  }
+}
+
+@media (min-width: 400px) {
+  .scroll-down {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.background img {
+  position: absolute;
+  max-width: 300px;
+}
+
+/* second */
+.section.ideas {
+  background-color: var(--sec);
+  color: #fff;
+}
+
+.ideas-bg img {
+  width: 180px;
+  right: 5%;
+  bottom: 10%;
+}
+
+.slide {
+  opacity: 0;
+  transition: 3s all;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* section third */
+.section.domain {
+  background-color: var(--third);
+}
+
+.sec-header {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 70%;
+  max-width: 500px;
+  color: #fff;
+}
+
+.domain-bg img {
+  width: 200px;
+  right: 10%;
+  bottom: 10%;
+  /* opacity: 0; */
+}
+
+/* fourth sec */
+.section.statistics {
+  background-color: var(--fourth);
+}
+
+.stat-bg img {
+  width: 150px;
+  right: 10%;
+  bottom: 10%;
+}
+
+/* modal */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+
+.modal-container.show-modal {
+  display: block;
+  z-index: 2000;
+}
+
+.modal {
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  width: 400px;
+  min-height: 200px;
+}
+
+.modal-header {
+  color: #fff;
+  background-color: var(--first);
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-form {
+  height: 100%;
+}
+
+.modal-content {
+  padding: 20px;
+  border: none;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.modal-form .form-input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  background: var(--first);
+  color: #fff;
+  width: 100%;
+  height: 40px;
+}
+
+.close-btn {
+  background: var(--third);
+  font-size: 25px;
+  color: #fff;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+/* footer */
+footer {
+  padding-top: 20px;
+  background-color: var(--dark-color);
+  color: #ddd;
+}
+
+.line {
+  width: 80%;
+  height: 2px;
+  background: rgba(200, 200, 200, 0.4);
+  margin: 10px auto;
+}
+
+
+.main-bg img {
+  position: absolute;
+  bottom: 0;
+  left: 70%;
+  transform: translateX(-50%);
+  animation: pop 3s infinite ease-in;
+  transform: translateY(100%);
+}
+
+.show {
+  transform: translateY(0);
+}
+
+/* @keyframes pop {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+} */

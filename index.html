@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Landing page </title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container d-flex justify-content-between pt-3">
+      <div class="header-logo logo">
+        <img src="img/geom.png" alt="">
+      </div>
+
+      <div class="header-buttons pb-3">
+        <button class='btn btn-header-first'>Discover</button>
+        <button id="open" class="cta btn"> Sign up</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section main">
+    <div class="main-header text-center">
+      <h1>Create your dream blog</h1>
+      <button class="cta btn text-white mt-4"> Create your blog</button>
+    </div>
+    <div class="main-bg background">
+      <!-- <img src="img/geo.png" alt=""> -->
+    </div>
+    <div class="scroll-down">
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </section>
+
+  <section class="section ideas">
+    <div class="sec-header">
+      <h2>Publish your passion</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nihil similique quisquam
+        fugiat illum neque
+        officiis harum maxime cum assumenda.</p>
+    </div>
+
+    <div class="ideas-bg background">
+      <img class='slide' src="img/first.png" alt="">
+    </div>
+
+  </section>
+
+  <section class="section domain">
+    <div class="sec-header">
+      <h2> Get a domain</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nihil similique quisquam
+        fugiat illum neque
+        officiis harum maxime cum assumenda.</p>
+    </div>
+    <div class="domain-bg background">
+      <img class='slide' src="img/web2.png" alt="">
+    </div>
+  </section>
+
+  <section class="section statistics">
+    <div class="sec-header">
+      <h2> Show statistics</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nihil similique quisquam
+        fugiat illum neque
+        officiis harum maxime cum assumenda.</p>
+    </div>
+    <div class="stat-bg background">
+      <img class='slide' src="img/web3.png" alt="">
+    </div>
+  </section>
+
+  <footer>
+    <section>
+      <div class="container d-flex justify-content-around">
+        <div>
+          <h4>Help</h4>
+          <p class='text-muted'>Help Center</p>
+        </div>
+
+        <div>
+          <h4>Community</h4>
+          <p class='text-muted'>Community forum</p>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <p class='text-muted'>Developer forum</p>
+        </div>
+      </div>
+
+    </section>
+    <div class="line"></div>
+    <section class="policy">
+      <div class="container d-flex justify-content-around">
+        <p class='text-muted'>Terms of service</p>
+        <p class='text-muted'>Policy</p>
+        <p class='text-muted'>Copyright</p>
+        <p class='text-muted'>Design</p>
+      </div>
+    </section>
+  </footer>
+
+  <!-- modal -->
+  <div class="modal-container" id="modal">
+
+    <div class="modal">
+      <button class="close-btn" id="close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>Sign up to newsletter</h3>
+      </div>
+
+      <div class="modal-content">
+        <form class="modal-form ">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Name" class="form-input" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" class="form-input" />
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src='app.js'></script>
+</body>
+
+</html>
